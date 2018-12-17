@@ -1,0 +1,30 @@
+@import "~variables.scss";
+
+.board {
+  background: $white;
+  margin: 3rem auto;
+  &__container {
+    border: 2px solid $grey;
+  }
+  &__row:not(:last-child) {
+    border-bottom: 2px solid $grey;
+  }
+  &__cell {
+    text-align: center;
+    vertical-align: middle;
+    height: 10rem;
+    width: 10rem;
+    border: none;
+    font-size: 5rem;
+  }
+  &__cell:not(:last-child) {
+    border-right: 2px solid $grey;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: $secondary-color;
+  text-transform: uppercase;
+}

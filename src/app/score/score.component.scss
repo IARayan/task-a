@@ -1,0 +1,9 @@
+@import "~variables.scss";
+
+.score {
+  background: $main-color;
+  padding: 1rem;
+  h1 {
+    color: $white;
+  }
+}
