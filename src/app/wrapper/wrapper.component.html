@@ -2,11 +2,11 @@
   <div class="col-3 full-height">
     <app-score></app-score>
   </div>
-  <div class="col-6">
-    <app-grid (selectedCell)="selectCell($event)"></app-grid>
+  <div class="col-6 board__container">
+    <app-grid [board]="board" (selectedCell)="selectCell($event)"></app-grid>
+    <app-reset-button (click)="resetGame()" *ngIf="showResetButton"></app-reset-button>
   </div>
   <div class="col-3">
     <app-score></app-score>
   </div>
-    <app-reset-button></app-reset-button>
 </div>

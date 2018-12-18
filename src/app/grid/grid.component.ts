@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 import { Board } from '../models/board';
 
@@ -10,7 +10,7 @@ import { Board } from '../models/board';
 
 export class GridComponent {
   @Output() selectedCell = new EventEmitter();
-  board = new Board();
+  @Input() board: Board;
 
   selectCell(cell) {
     if (cell.player === '') {
