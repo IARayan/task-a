@@ -4,8 +4,9 @@ export class Player {
   lost = 0;
   tie = 0;
   avgPlayTime = 0;
-  
-  constructor(name) {
+  moves = [];
+
+  constructor(name: string = '') {
     this.name = name;
   }
 

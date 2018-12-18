@@ -17,6 +17,11 @@
     border: none;
     font-size: 5rem;
   }
+  &__cell:hover {
+    background: $grey;
+    transition: linear all 0.2s;
+    cursor: pointer;
+  }
   &__cell:not(:last-child) {
     border-right: 2px solid $grey;
   }
@@ -27,4 +32,8 @@ h1 {
   font-size: 4rem;
   color: $secondary-color;
   text-transform: uppercase;
+}
+
+.disabled:hover {
+  background: none;
 }

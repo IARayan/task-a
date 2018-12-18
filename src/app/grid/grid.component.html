@@ -3,13 +3,13 @@
   <table class="board">
     <tbody>
       <tr class="board__row">
-        <th [ngStyle]="{'color':cell.player === 'X' ? '#fc942f' : '#4a455e' }" *ngFor="let cell of board.firstRow" class="board__cell" scope="col" (click)="selectCell(cell)">{{cell.player}}</th>
+        <th [class.disabled] = "cell.player?.length > 0" [ngStyle]="{'color':cell.player === 'X' ? '#fc942f' : '#4a455e' }" *ngFor="let cell of board.firstRow" class="board__cell" scope="col" (click)="selectCell(cell)">{{cell.player}}</th>
       </tr>
       <tr class="board__row">
-        <th [ngStyle]="{'color':cell.player === 'X' ? '#fc942f' : '#4a455e' }" *ngFor="let cell of board.secondRow" class="board__cell" scope="col" (click)="selectCell(cell)">{{cell.player}}</th>
+        <th [class.disabled] = "cell.player?.length > 0" [ngStyle]="{'color':cell.player === 'X' ? '#fc942f' : '#4a455e' }" *ngFor="let cell of board.secondRow" class="board__cell" scope="col" (click)="selectCell(cell)">{{cell.player}}</th>
       </tr>
       <tr class="board__row">
-        <th [ngStyle]="{'color':cell.player === 'X' ? '#fc942f' : '#4a455e' }" *ngFor="let cell of board.thirdRow" class="board__cell" scope="col" (click)="selectCell(cell)">{{cell.player}}</th>
+        <th [class.disabled] = "cell.player?.length > 0" [ngStyle]="{'color':cell.player === 'X' ? '#fc942f' : '#4a455e' }" *ngFor="let cell of board.thirdRow" class="board__cell" scope="col" (click)="selectCell(cell)">{{cell.player}}</th>
       </tr>
     </tbody>
   </table>

@@ -3,7 +3,7 @@
     <app-score></app-score>
   </div>
   <div class="col-6">
-    <app-grid></app-grid>
+    <app-grid (selectedCell)="selectCell($event)"></app-grid>
   </div>
   <div class="col-3">
     <app-score></app-score>

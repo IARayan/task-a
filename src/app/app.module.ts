@@ -8,6 +8,7 @@ import { ScoreComponent } from './score/score.component';
 import { ResetButtonComponent } from './reset-button/reset-button.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
 
+import { PlayerService } from './player.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { WrapperComponent } from './wrapper/wrapper.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
