@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GridComponent } from './grid/grid.component';
 import { ScoreComponent } from './score/score.component';
 import { ResetButtonComponent } from './reset-button/reset-button.component';
+import { WrapperComponent } from './wrapper/wrapper.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ResetButtonComponent } from './reset-button/reset-button.component';
     AppComponent,
     GridComponent,
     ScoreComponent,
-    ResetButtonComponent
+    ResetButtonComponent,
+    WrapperComponent
   ],
   imports: [
     BrowserModule
