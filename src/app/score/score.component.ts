@@ -11,7 +11,12 @@ import { Player } from '../models/player';
 })
 export class ScoreComponent {
   @Input()  player: Player;
+  public showScores = false;
 
   constructor() {}
+
+  toggleScores () {
+    this.showScores = !this.showScores;
+  }
 
 }
