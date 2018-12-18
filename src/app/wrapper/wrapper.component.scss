@@ -1,5 +1,9 @@
+@import "~variables.scss";
+
 .board__container {
   position: relative;
+  border-right: $orange 2px solid;
+  border-left: $orange 2px solid;
 }
 app-reset-button {
   position: absolute;
@@ -7,7 +11,10 @@ app-reset-button {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.5;
-  background: #000;
+  background: #000000a3;
   color: #fff;
+}
+
+.score {
+  padding: 0;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-reset-button',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reset-button.component.scss']
 })
 export class ResetButtonComponent implements OnInit {
-
-  constructor() { }
+  @Input() winner: string;
+  message = '';
+  constructor() {}
 
   ngOnInit() {
-  }
-
+      if (this.winner === 'tie') {
+        this.message = 'It\'s a Tie!';
+      } else {
+        this.message = `Player ${this.winner} won!`;
+      }
+    }
 }

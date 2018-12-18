@@ -1,8 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Condensed');
 
 html,body {
   height: 100%;
   font-size: 12px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .full-height {

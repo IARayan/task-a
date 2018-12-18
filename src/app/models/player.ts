@@ -3,8 +3,10 @@ export class Player {
   won = 0;
   lost = 0;
   tie = 0;
-  avgPlayTime = 0;
+  avgPlayTime = null;
   moves = [];
+  timeConsumed = 0;
+  timeAssigned;
   winningCombos = [
     [1, 2, 3],
     [4, 5, 6],
@@ -17,10 +19,18 @@ export class Player {
   ];
   constructor(name: string = '') {
     this.name = name;
+    this.setTimeAssigned(new Date());
+  }
+
+  setTimeAssigned (timeAssigned) {
+    this.timeAssigned = timeAssigned.getTime();
   }
 
   calculateAvgPlayTime() {
-    this.avgPlayTime = 5;
+    const timePlayed = new Date().getTime();
+    this.timeConsumed += ((timePlayed - this.timeAssigned) / 1000);
+    this.avgPlayTime = (this.timeConsumed / this.moves.length).toFixed(1);
+    this.timeAssigned = null;
   }
 
   checkWin() {

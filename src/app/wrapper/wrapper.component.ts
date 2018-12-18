@@ -12,16 +12,17 @@ import { Board } from '../models/board';
 export class WrapperComponent {
   subscription: Subscription;
   player: any;
+  stopMessage = '';
   board = new Board();
   showResetButton = false;
   constructor(private playerService: PlayerService) {
     this.setPlayer();
-    this.subscription = this.playerService.stopGame.subscribe(stop =>
-    stop === true ? this.stopGame() : this.setPlayer());
+    this.subscription = this.playerService.stopGame.subscribe(player =>
+    player.length > 0 ? this.stopGame(player) : this.setPlayer());
   }
 
-  stopGame() {
-    // Prompt user to start a new game and show winner.
+  stopGame(player) {
+    this.stopMessage = player;
     this.showResetButton = true;
   }
 

@@ -2,8 +2,42 @@
 
 .score {
   background: $main-color;
-  padding: 1rem;
+  padding: 3rem 1rem;
+  text-align: center;
   h1 {
     color: $white;
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+  &__list {
+    padding: 0;
+    list-style: none;
+    margin: 3rem;
+    font-size: 1.5rem;
+    background: #1e1f3f;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+  }
+  &__item {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    span:first-child {
+      color: $secondary-color;
+    }
+    span + span {
+      color: $coral;
+    }
+  }
+  &__avatar {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

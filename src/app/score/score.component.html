@@ -1,3 +1,38 @@
 <div class="container score full-height">
-  <h1>Player 1</h1>
+  <h1>Player {{player.name === 'X'? 1:2}}</h1>
+  <div class="score__avatar">
+    <img src="{{player.name === 'X'? '../../assets/player_one.svg' : '../../assets/player_two.svg' }}"/>
+  </div>
+  <ul class="score__list">
+    <li>
+      <div class="score__item">
+        <span>Won:</span>
+        <span>{{player.won}}</span>
+      </div>
+    </li>
+    <li>
+      <div class="score__item">
+        <span>Lost:</span>
+        <span>{{player.lost}}</span>
+      </div>
+    </li>
+    <li>
+      <div class="score__item">
+        <span>Tied:</span>
+        <span>{{player.tie}}</span>
+      </div>
+    </li>
+    <li *ngIf="player.timeConsumed">
+      <div class="score__item">
+        <span>Playtime:</span>
+        <span>{{player.timeConsumed.toFixed(1)}} S</span>
+      </div>
+    </li>
+    <li *ngIf="player.avgPlayTime">
+      <div class="score__item">
+        <span>Average Playtime:</span>
+        <span>{{player.avgPlayTime}} S</span>
+      </div>
+    </li>
+  </ul>
 </div>
